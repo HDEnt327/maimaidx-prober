@@ -2,36 +2,48 @@
 
 This is the documentation for the maimai-prober API
 
-All API routes link to https://www.diving-fish.com/api/maimaidxprober/*
+All API routes link to https://www.diving-fish.com/api/*
 
-> e.g. to access /player/profile head to https://www.diving-fish.com/api/maimaidxprober/player/profile
+> e.g. to access maimai/player/profile head to https://www.diving-fish.com/api/maimaidxprober/player/profile
 
-## Query
+---
 
-Path: `/query`
-
-### Player
+## maimai
 
 **Path:**
 
-`/player`
+`/maimaidxprober`
+
+---
+
+### Query: Player
+
+**Path:**
+
+`/query/player`
 
 **Parameters:**
 
-`"username": str`
+`"username" OR "qq": str`
 
 `"b50": bool`
 
 **Usage:**
 
-Returns a list of scores in best40 or best50 in decending order of rating
+Returns a list of scores in the player's best40 or best50 in decending order of rating.
 
-### Plate
+### Query: Plate
 
 **Path:**
 
-`/plate`
+`/query/plate`
 
-Parameters:
+**Parameters:**
 
-Usage:
+`"username" OR "qq": str`
+
+`"version": str[]`
+
+**Usage:**
+
+Returns information related to a player's plate for a version. For list of versions, refer to 
